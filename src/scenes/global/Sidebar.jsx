@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
-import { Box, IconButton, Typography, useTheme } from '@mui/material';
+import { Box, colors, IconButton, Typography, useTheme } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { tokens } from '../../theme';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
@@ -17,6 +17,24 @@ import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
 import { color } from '@mui/system';
+
+const Item = ({ title, to, icon, selected, setSelected }) => {
+  const theme = useTheme();
+  const color = tokens(theme.palette.mode);
+  return (
+    <MenuItem
+      active={selected === title}
+      onClick={() => setSelected(title)}
+      icon={icon}
+      style={{
+        color: colors.grey[100],
+      }}
+    >
+      <Typography>{title}</Typography>
+      <Link to={to} />
+    </MenuItem>
+  );
+};
 
 const Sidebar = () => {
   const theme = useTheme();
@@ -69,6 +87,29 @@ const Sidebar = () => {
               </Box>
             )}
           </MenuItem>
+          <Box>
+            <Item
+              title="Dashboard"
+              to="/"
+              icon={<HomeOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: '15px 0 5px 20px' }}
+            >
+              Data
+            </Typography>
+            <Item
+              title="Manage Team"
+              to="/team"
+              icon={<PeopleOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            ></Item>
+          </Box>
         </Menu>
       </ProSidebar>
     </Box>
