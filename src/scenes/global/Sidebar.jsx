@@ -60,8 +60,10 @@ const Sidebar = () => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography>ADMIN</Typography>
-                <IconButton>
+                <Typography variant="h3" color={colors.grey[100]}>
+                  ADMIN
+                </Typography>
+                <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
                 </IconButton>
               </Box>
