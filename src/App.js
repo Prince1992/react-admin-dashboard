@@ -23,7 +23,7 @@ function App() {
         <CssBaseline />
         <div className="app">
           <Sidebar />
-          <main className="content">
+          <main className="content" style={{ width: '100%' }}>
             <Topbar />
             <Routes>
               <Route path="/" element={<Dashboard />} />
