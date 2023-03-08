@@ -123,6 +123,13 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             ></Item>
+            <Item
+              title="Forms"
+              to="/form"
+              icon={<PersonOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            ></Item>
           </Box>
         </Menu>
       </ProSidebar>
