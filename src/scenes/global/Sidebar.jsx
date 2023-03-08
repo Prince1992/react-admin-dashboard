@@ -109,6 +109,20 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             ></Item>
+            <Item
+              title="Contact Information"
+              to="/contacts"
+              icon={<ContactOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            ></Item>
+            <Item
+              title="Invoices"
+              to="/invoices"
+              icon={<ReceiptOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            ></Item>
           </Box>
         </Menu>
       </ProSidebar>
