@@ -130,6 +130,13 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             ></Item>
+            <Item
+              title="Calendar"
+              to="/calendar"
+              icon={<CalenderTodayOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            ></Item>
           </Box>
         </Menu>
       </ProSidebar>
