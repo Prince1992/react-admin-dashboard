@@ -137,6 +137,13 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             ></Item>
+            <Item
+              title="FAQ Page"
+              to="/faq"
+              icon={<HelpOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
           </Box>
         </Menu>
       </ProSidebar>
