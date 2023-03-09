@@ -64,14 +64,14 @@ const GeographyChart = ({ isDashboard }) => {
                 itemWidth: 94,
                 itemHeight: 18,
                 itemDirection: 'left-to-right',
-                itemTextColor: '#444444',
+                itemTextColor: colors.grey[100],
                 itemOpacity: 0.85,
                 symbolSize: 18,
                 effects: [
                   {
                     on: 'hover',
                     style: {
-                      itemTextColor: '#000000',
+                      itemTextColor: '#ffffff',
                       itemOpacity: 1,
                     },
                   },
