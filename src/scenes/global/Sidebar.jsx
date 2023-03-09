@@ -8,7 +8,7 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 import ContactOutlinedIcon from '@mui/icons-material/ContactsOutlined';
 import ReceiptOutlinedIcon from '@mui/icons-material/ReceiptOutlined';
-import PersonOutlinedIcon from '@mui/icons-material/PercentOutlined';
+import PersonOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 import CalenderTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
 import HelpOutlinedIcon from '@mui/icons-material/HelpOutlined';
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
@@ -86,6 +86,32 @@ const Sidebar = () => {
               </Box>
             )}
           </MenuItem>
+          {!isCollapsed && (
+            <Box mb="25px">
+              <Box display="flex" justifyContent="center" alignItems="center">
+                <img
+                  alt="profile-user"
+                  width="100px"
+                  height="100px"
+                  src="https://s.ndtvimg.com//images/entities/120/brett-lee-82.png"
+                  style={{ cursor: 'pointer', borderRadius: '50%' }}
+                />
+              </Box>
+              <Box textAlign="center">
+                <Typography
+                  variant="h2"
+                  color={colors.grey[100]}
+                  fontWeight="bold"
+                  sx={{ m: '10px 0 0 0' }}
+                >
+                  Brett Lee
+                </Typography>
+                <Typography variant="h5" color={colors.greenAccent[500]}>
+                  VP Fancy Admin
+                </Typography>
+              </Box>
+            </Box>
+          )}
           <Box>
             <Item
               title="Dashboard"
@@ -116,14 +142,21 @@ const Sidebar = () => {
               setSelected={setSelected}
             ></Item>
             <Item
-              title="Invoices"
+              title="Invoices Balances"
               to="/invoices"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             ></Item>
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: '15px 0 5px 20px' }}
+            >
+              Pages
+            </Typography>
             <Item
-              title="Forms"
+              title="Profile Form"
               to="/form"
               icon={<PersonOutlinedIcon />}
               selected={selected}
